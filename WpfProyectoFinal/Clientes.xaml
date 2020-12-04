@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfProyectoFinal.Clientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProyectoFinal"
+        mc:Ignorable="d"
+        Title="Clientes" Height="340.318" Width="803.616" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="180"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Id" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="54,14,54,12"></Label>
+        <Label Content="Numero de Documento" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="10,14,0,12" Width="140"></Label>
+        <Label Content="Razon Social" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="40,14,35,12" Width="75"></Label>
+        <Label Content="Telefono" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="46,14,43,12" Width="61"></Label>
+        <Label Content="Email" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" Margin="54,14,54,12"/>
+
+        <TextBox Name="txtId" Grid.Row="0" Grid.Column="1" Height="30" Margin="5" IsEnabled="False"/>
+        <TextBox Name="txtNumDocumento" Grid.Row="1" Grid.Column="1" Height="30" Margin="5"></TextBox>
+        <TextBox Name="txtRazonSocial" Grid.Row="2" Grid.Column="1" Height="30" Margin="5"></TextBox>
+        <TextBox Name="txtTelefono" Grid.Row="3" Grid.Column="1" Height="30" Margin="5"></TextBox>
+        <TextBox Name="txtEmail" Grid.Row="4" Grid.Column="1" Height="30" Margin="5,10"/>
+
+        <DataGrid x:Name="dtgClientes"  Grid.Row="0" Grid.Column="2" Grid.RowSpan="6" Margin="6,10,4,0" BorderBrush="Black" MouseDoubleClick="dtgClientes_MouseDoubleClick">
+
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,2,26,10" Grid.RowSpan="2">
+            <Button Name="btnLimpiar"  Content="Limpiar" Grid.Row="4" Grid.Column="1" Height="25" Width="60" Margin="5" Click="btnLimpiar_Click"></Button>
+            <Button Name="btnAgregar"  Content="Agregar" Grid.Row="4" Grid.Column="1" Height="25" Width="60" Margin="5" Click="btnAgregar_Click"></Button>
+            <Button Name="btnModificar"  Content="Modificar" Grid.Row="4" Grid.Column="1" Height="25" Width="60" Margin="5" Click="btnModificar_Click"></Button>
+            <Button Name="btnEliminar"  Content="Eliminar" Grid.Row="4" Grid.Column="1" Height="25" Width="60" Margin="5" Click="btnEliminar_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
